@@ -1,13 +1,18 @@
-use cortex_m_semihosting::{debug, hprintln};
+// Machine generated, DO NOT TOUCH!
+use crate::app::*;
 
-use crate::app;
+pub mod init {
+    pub struct Context {}
+}
+
+pub mod idle {
+    pub struct Context {}
+}
 
 #[no_mangle]
 unsafe extern "C" fn main() -> ! {
-    hprintln!("hello").ok();
+    let a = init::Context {};
+    init(init::Context {});
 
-    app::hello();
-
-    debug::exit(debug::EXIT_SUCCESS);
-    loop {}
+    idle(idle::Context {});
 }
