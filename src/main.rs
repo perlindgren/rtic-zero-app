@@ -1,8 +1,6 @@
 // fixed should not touch
-#![no_main]
 #![no_std]
+#![no_main]
 
 mod app;
 mod gen;
-
-
